@@ -20,3 +20,61 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Stylizacja nag³ówka */
+.hero {
+    background: url('/images/banner.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.shop-name {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+}
+
+/* Stylizacja sekcji produktów */
+.products {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+}
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+.price {
+    font-size: 1.2rem;
+    color: #e63946;
+    font-weight: bold;
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<WebApplication1.Models.ProductViewModel>
+
+@{
+    ViewData["Title"] = "SALE";
+}
+
+<h1 class="text-center">SALE</h1>
+
+<!-- Wyszukiwarka -->
+<div class="container my-4">
+    <form asp-action="Index" method="get" class="form-inline d-flex justify-content-center">
+        <input type="text" name="search" class="form-control w-50" placeholder="Wyszukaj produkt..." value="@ViewData["SearchTerm"]">
+        <button type="submit" class="btn btn-dark ml-2">Szukaj</button>
+    </form>
+</div>
+
+<!-- Sortowanie -->
+<div class="container my-3">
+    <form asp-action="Index" method="get" class="form-inline d-flex justify-content-center">
+        <label for="sortBy" class="mr-2">Sortuj według:</label>
+        <select name="sortBy" class="form-control">
+            <option value="price-asc">Cena: od najniższej</option>
+            <option value="price-desc">Cena: od najwyższej</option>
+            <option value="size">Rozmiar</option>
+        </select>
+        <button type="submit" class="btn btn-secondary ml-2">Sortuj</button>
+    </form>
+</div>
+
+<!-- Lista produktów -->
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="~/images/koszulkan4d2.jpg" class="card-img-top" alt="@item.Name">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">Cena: @item.Price PLN</p>
+                        <p class="card-text">Rozmiar: @item.Size</p>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Szczegóły</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

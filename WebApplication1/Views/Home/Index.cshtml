@@ -1,9 +1,38 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Neurosis4Decades - Sklep";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>to College of Economics and Computer Science back-office system.</p>
-    <p>Your last visit: @ViewData["LastVisit"]</p>
-</div>
+<!-- Nagłówek -->
+<header class="hero">
+    <div class="container">
+        <h1 class="shop-name">Neurosis4Decades</h1>
+        <p class="subtitle">Ekskluzywne ubrania w unikalnym stylu</p>
+    </div>
+</header>
+
+<!-- Sekcja produktów -->
+<section class="products">
+    <div class="container">
+        <h2>Nasze produkty</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="~/images/koszulkan4d2.jpg" alt="Produkt 1">
+                <h3>T-Shirt Oversize</h3>
+                <p class="price">99,99 PLN</p>
+            </div>
+            <div class="product-card">
+                <img src="~/images/koszulkan4d2.jpg" alt="Produkt 2">
+                <h3>Bluza z Kapturem</h3>
+                <p class="price">199,99 PLN</p>
+            </div>
+            <div class="product-card">
+                <img src="~/images/koszulkan4d2.jpg" alt="Produkt 3">
+                <h3>Jeansy Slim Fit</h3>
+                <p class="price">249,99 PLN</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Podłączenie niestandardowych stylów -->
+<link rel="stylesheet" href="~/css/n4d.css">
